@@ -15,10 +15,13 @@
 
 (Terminalで実行してください / 最初の `$` はプロンプトを意味します、 `$` のコピペは不要です)
 
-1. $ `docker-compose up -d`
+1. `.env.default` から `.env` をコピーして作成
+2. `.env` 内で定義されている `COMPOSE_PROJECT_NAME=DEFAULT` の `DEFAULT` を任意の名前に変更
+1. $ `docker-compose -p <.envで定義したCOMPOSE_PROJECT_NAME=DEFAULTの値> up -d`
 2. $ `docker-compose exec php bash`
 3. $ `laravel new public`
 
 ## 参考
 
-https://qiita.com/A-Kira/items/1c55ef689c0f91420e81
+- https://qiita.com/A-Kira/items/1c55ef689c0f91420e81
+- https://qiita.com/reflet/items/b7b384d202a9f5514fb3
